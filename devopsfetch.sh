@@ -6,6 +6,7 @@ usage() {
   echo "Devopsfetch🔥 is a tool that collects and displays system information, including active ports, user logins, Nginx configurations, Docker images, and container statuses."
   echo ""
   echo "To effectively use please install jq: sudo apt-get install jq"
+  echo ""
   echo "usage: ./devopsfetch [-p | --port] [-d | --docker] [-n | --nginx] [-u | --users] [-t | --time] [-h | --help]"
   echo ""
   echo "These are the commands you can use in various situations:"

@@ -97,14 +97,14 @@ display_time_range_activities() {
 # Function to list all active ports and services
 list_ports() {
   echo "Active Ports and Services:"
-  lsof -i -P -n | grep LISTEN
+  ss -tuln
 }
 
 # Function to show detailed information about a specific port
 show_port_info() {
   port_number=$1
   echo "Detailed Information for Port: $port_number"
-  lsof -i -P -n | grep ":$port_number (LISTEN)"
+  ss -tuln | grep ":$port_number"
 }
 
 

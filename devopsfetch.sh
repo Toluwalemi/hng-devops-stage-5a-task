@@ -103,8 +103,9 @@ list_ports() {
 show_port_info() {
   port_number=$1
   echo "Detailed Information for Port: $port_number"
-  ss -tulnp | grep ":$port_number"
+  lsof -i -P -n | grep ":$port_number (LISTEN)"
 }
+
 
 # Function to list all Nginx domains and their ports
 list_nginx_domains() {
